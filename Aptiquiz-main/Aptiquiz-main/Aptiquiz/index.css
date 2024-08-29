@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+    font-family: 'Merriweather', serif;
+
+  }
+  body{
+    height: 100%;
+    margin: 0;
+    background: #FC5C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  .red{
+    color:bisque;
+   
+  }
+  h1{
+    margin-left:15%;
+    font-size:80px;
+    font-weight:600px;
+  }
+  h2{
+    font-size:50px;
+    margin-left:40%;
+  }
+  .table1{
+    margin-left:35%;
+
+  }
+  a{
+    text-decoration:none;
+  }
+  button{
+    padding:25px;
+    background-color:white;
+    border-radius:15px;
+  }
+  .table2{
+    margin-left:30%
+  }
+  #two{
+    margin-top:5%;
+  }
+  h1{
+    display:inline;
+    background-color:white;
+
+  }
+  #we{
+    margin-left:25%;
+    font-size:20px;
+    color:black;
+    text-decoration:none;
+  }
+  #we2
+  {
+    margin-left:5%;
+    font-size:20px;
+    color:black;
+    text-decoration:none;
+
+  }
+  .br{
+    background-color:bisque;  }
+  .top{
+    
+    background-color:white;
+  }
+  .hello{
+    margin-top:5%;
+    height:400px;
+    width:350px;
+    background-color: white;
+    margin-left:37%;
+    border-radius:20px;
+    padding:5px;
+  }
+  img{
+    height:400px;
+    width:350px;
+  }

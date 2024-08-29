@@ -1,0 +1,47 @@
+html {
+    height: 100%;
+    font-family: 'Merriweather', serif;
+
+  }
+  body{
+    height: 100%;
+    margin: 0;
+    background: #FC5C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  }
+  .panel{
+    height:320px;
+    width:560px;
+    background-color:white;
+    z-index:2;
+    margin-top:10%;
+    margin-left:30%;
+    border-radius:20px;
+    padding:15px;
+}
+button{
+    margin-left:35%;
+    margin-top:2%;
+    border-radius: 15px;
+    padding:20px;
+    background-color: #FC5C7D;
+    width:100px;
+    border:2px solid black;
+
+  }
+  h1{
+    margin-left:8%;
+    text-align:center;
+  }
+#score{
+  margin-left:35%;
+  font-size:20px;
+}
+table{
+  margin-left:20%;
+}
+#exit{
+  margin-left:120px;
+}

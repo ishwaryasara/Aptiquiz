@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Noto+Sans&display=swap" rel="stylesheet">
+<script>
+    function sign(){
+         //phone number
+         var phone=document.getElementById("mobile").value;
+         var phflag=false;
+         if((6000000000<=phone)&&(phone<=9999999999))
+         {
+            phflag=true;
+         }
+         else{
+               document.getElementById("error").innerHTML="invalid  ph"
+               document.getElementById("error").style.color="red";;
+
+            }
+         //email 
+         var email=document.getElementById("em").value;
+         var emflag=false;
+         for(var i=0;i<=email.length;i++)
+         {
+            if(email[i]=="@"){
+               emflag=true;
+            }
+           
+         }
+         //password validation
+         var p = document.getElementById("pass").value;
+         var upper = 0;
+         var lower = 0;
+         var num = 0;
+         var special = 0;
+         var paflag = false;
+
+         for (var i = 0; i < p.length; i++) {
+               var char = p[i];
+
+               if ('A' <= char && char <= 'Z')
+                {
+                upper++;
+                } 
+                else if ('a' <= char && char <= 'z') 
+                {
+                 lower++;
+                } 
+                else if ('0' <= char && char <= '9') 
+                {
+                 num++;
+                 } 
+               else {
+                   special++;
+                   }
+               }
+
+        if (upper >= 1 && lower >= 1 && special >= 1 && num >= 1 && p.length >= 8 && p.length <= 12)
+         {
+          paflag = true;
+         } 
+         else
+          {
+             document.getElementById("error").innerHTML = "Invalid password";
+             documnet.getElementById("error").style.color="red";;
+
+          }
+      
+          //confirm validation
+          var confirm=document.getElementById("cp").value 
+            var coflag=false
+            if(p==confirm){
+                coflag=true
+            }
+            else{
+               document.getElementById("error").innerHTML="invalid co-password"
+               document.getElementById("error").style.color="red";
+
+            }
+            //valid final
+         
+            if((phflag==true)&&(emflag==true)&&(paflag==true)&&(coflag==true)){
+                window.location.href="./regotp.html"
+            }
+            
+         }
+
+</script>
+</head>
+<body>
+    <div class="sign">
+        <h1>REGISTER</h1>
+        <table>
+            <tr>
+                <td>FIRSTNAME</td>
+                <td><input type="text" id="fn"></td>
+             </tr>
+             <tr>
+                <td>LASTNAME</td>
+                <td><input type="text" id="ln"></td>
+             </tr>
+             <tr>
+                <td>MOBILE NUMBER</td>
+                <td><input type="number" id="mobile"></td>
+             </tr>
+             <tr>
+                <td>EMAIL</td>
+                <td><input type="email" id="em"></td>
+             </tr>
+             <tr>
+                <td>PASSWORD</td>
+                <td><input type="password" id="pass"></td>
+             </tr>
+             <tr>
+                <td>CONFIRM PASSWORD </td>
+                <td><input type="password" id="cp"></td>
+    
+             </tr>
+             <tr>
+                <td colspan="2">
+                          <input type="checkbox"> I agree with your terms and conditions<br>
+                 </td>
+             </tr>
+             <tr class="left"><td><button class="btn"><a href="./index.html">CANCEL</a></button></td>
+                 <td><button class="btn" onclick="sign()">SIGN-UP</button></td>
+             </tr>
+             <tr>
+                <td rowspan="2">
+                 <p id="error"></p>
+                 </td>
+                 </tr>
+    
+        </table>
+    </div>
+</body>
+</html>

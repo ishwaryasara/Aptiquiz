@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Noto+Sans&display=swap" rel="stylesheet">
+<script>
+     function login(){
+            var db={'dhiviee':'Dhiv@123','javadev':'Dev@1234'}
+            var use=document.getElementById("username").value 
+            var pas=document.getElementById("password").value
+            var all_users=Object.keys(db)
+            var flag=false;
+            for(var i=0;i<all_users.length;i++){
+                if((all_users[i]==use)&&(db[all_users[i]]==pas)){
+                    flag=true;
+                }
+            }
+               if(flag==true){
+                window.location.href="./home.html"
+                }
+              else{
+                  document.getElementById("error").innerHTML="Invalid Username or Incorrect Password"
+                 }
+           }
+</script>
+</head>
+<body>
+    <div class="sign">
+        <h1>LOGIN</h1>
+        <label >USERNAME</label><br>
+        <input type="text" id="username"><br>
+        <label>
+            PASSWORD
+        </label> <br>
+        <input type="password" id="password"><br>
+        <p><a href="./otp.html">forget password?</a></p>
+        <table>
+            <tr>
+        <td><button onclick="login()">START</button></td>
+
+        <td><button class="left"><a href="./sign-up.html">SIGN-UP</a></button></td>
+        </tr>
+        </table>
+
+    </div>
+</body>
+</html>

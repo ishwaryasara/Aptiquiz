@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/otp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script>
+     var otp=Math.floor(Math.random()*999999)
+        alert(otp)
+        function otpverify(){
+            var user_otp=document.getElementById("OTP").value 
+            if(otp==user_otp){
+                window.location.href="./login.html"
+            }
+            else{
+            document.getElementById("error").innerHTML="INVALID OTP";
+            document.getElementById("error").innerHTML.style.color="red";
+            }
+
+        }
+        function resendotp(){
+            window.location.href="./otp.html"
+        }
+</script>
+</head>
+<body>
+    <div class="sign">
+    <h1>Otp</h1>
+    <label>ENTER THE OTP</label><br>
+    <input type="number" id="OTP"><button class="btn1" onclick="otpverify()"> VERIFY</button><br>
+    <p id="error" style="color: red;"></p>
+    <p>DO YOU WANT TO RESEND OTP? <br><button class="btn" onclick="resendotp()">RESEND</button></p>
+    </div>
+</body>
+</html>
